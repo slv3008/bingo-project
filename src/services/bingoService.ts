@@ -13,7 +13,7 @@ export function generateBingoCard(): Card {
   card.N = generateUniqueNumbers(4, 31, 45);
   card.G = generateUniqueNumbers(5, 46, 60);
   card.O = generateUniqueNumbers(5, 61, 75);
-  card.N.splice(2, 0, ); 
+  card.N.splice(2, 0, null); 
   return card;
 }
 
@@ -42,9 +42,10 @@ export function checkBingo(card: Card, calledNumbers: number[]): boolean {
   ];
 
   for (const line of lines) {
-    if (line.every(num => calledNumbers.includes(num) || num === null)) {
+    if (line.every(num => num === null || calledNumbers.includes(num as number))) {
       return true;
     }
   }
   return false;
 }
+

@@ -47,7 +47,7 @@ import {
     // Test para checkBingo
     test('Should correctly verify bingo', () => {
         const card: Card = generateBingoCard();
-        const calledNumbers: number[] = [...card.B, ...card.I, card.N[0], card.N[1], card.N[3], ...card.G, ...card.O];
+        const calledNumbers: number[] = [...card.B, ...card.I, card.N[0], card.N[1], card.N[3], ...card.G, ...card.O].filter((num): num is number => num !== null);
         const hasBingo = checkBingo(card, calledNumbers);
         expect(hasBingo).toBe(true);
     });
