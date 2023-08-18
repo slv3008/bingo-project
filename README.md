@@ -63,6 +63,6 @@ URL: http://localhost:3000/dev/card
 
 ### Llamar al siguiente número
 Método: GET
-URL: http://localhost:3000/dev/call-number
+URL: http://localhost:3000/dev/game/{gameId}/number
 Nota: Asegúrate de reemplazar {gameId} con el ID del juego que estás utilizando.
 

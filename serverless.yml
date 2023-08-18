@@ -20,7 +20,7 @@ functions:
     timeout: 30
     events:
       - http:
-          path: call-number
+          path: game/{gameId}/number
           method: get
           cors: true
   verifyBingo:
