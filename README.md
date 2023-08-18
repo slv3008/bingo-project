@@ -40,7 +40,7 @@ Para ejecutar las pruebas unitarias:
 
 ### Verificar Bingo
 Método: POST
-URL: http://localhost:3000/verify
+URL: http://localhost:3000/dev/check-bingo
 Headers: Content-Type: application/json
 Body (JSON):
 
@@ -59,10 +59,10 @@ Body (JSON):
 
 ### Obtener una nueva tarjeta de Bingo
 Método: GET
-URL: http://localhost:3000/card
+URL: http://localhost:3000/dev/card
 
 ### Llamar al siguiente número
 Método: GET
-URL: http://localhost:3000/game/{gameId}/number
-Nota: {gameId} ID del juego que estás utilizando.
+URL: http://localhost:3000/dev/call-number
+Nota: Asegúrate de reemplazar {gameId} con el ID del juego que estás utilizando.
 
