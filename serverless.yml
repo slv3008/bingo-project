@@ -15,16 +15,16 @@ functions:
           path: card
           method: get
           cors: true
-  callNumber:
-    handler: src/handlers/api.callNumber
+  getNextNumber:
+    handler: src/handlers/api.getNextNumber
     timeout: 30
     events:
       - http:
           path: call-number
           method: get
           cors: true
-  checkBingo:
-    handler: src/handlers/api.checkBingo
+  verifyBingo:
+    handler: src/handlers/api.verifyBingo
     timeout: 30
     events:
       - http:
